@@ -1,0 +1,256 @@
+body {
+  all: unset;
+  font-family: "Roboto Mono", monospace;
+  background-image: url("./assets/1-b.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255, 0.9);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  max-width: 1024px;
+  background-color: #000000;
+  border: 2px solid #64c8dd;
+  border-radius: 2em;
+  margin: 6em auto;
+  padding: 1em;
+  padding-bottom: 4em;
+  box-shadow: 7px 17px 15px 0px rgba(100, 200, 221, 0.68);
+  -webkit-box-shadow: 7px 17px 15px 0px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 17px 15px 0px rgba(0, 0, 0, 0.68);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3em;
+}
+
+h1 {
+  color: #64c8dd;
+  font-size: 3em;
+  font-weight: 700;
+  width: fit-content;
+  margin: 2em auto 1.5em;
+  letter-spacing: 0.05em;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25em;
+  font-size: 1.7em;
+}
+
+input:focus {
+  outline-width: 0;
+}
+
+/*CHECKBOX*/
+
+.round {
+  position: relative;
+}
+
+.round label {
+  background-color: rgb(0, 0, 0, 0);
+  border: 3px solid #64c8dd;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
+}
+
+.round label:after {
+  border: 2px solid #64c8dd;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+  margin-right: 1.5em;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: rgb(0, 0, 0, 0);
+  border-color: #64c8dd;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+label.agree {
+  font-size: 0.75em;
+}
+
+form input,
+form textarea {
+  border: 1px solid #64c8dd;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0);
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+div.terms {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  font-weight: 700;
+  font-size: 0.75em;
+  letter-spacing: 0.125em;
+  background-color: #64c8dd;
+  color: rgb(255, 255, 255, 0.9);
+  border-radius: 10px;
+  border: none;
+  box-shadow: -1px 1px 34px 3px rgba(100,200,220,0.68);
+  -webkit-box-shadow: -1px 1px 34px 3px rgba(100,200,220,0.68);
+  -moz-box-shadow: -1px 1px 34px 3px rgba(100,200,220,0.68);
+  padding: 0.5em 1em;
+  margin-top: 1.5em;
+}
+
+div.text {
+  margin-top: 5em;
+  letter-spacing: 0.125px;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 767px) {
+  main {
+    width: 75%;
+    padding: 4em;
+    padding-bottom: 7em;
+  }
+
+  h1 {
+    margin-top: 1em;
+  }
+
+  div.container {
+    flex-direction: row;
+    align-items: flex-start;
+    column-gap: 5em;
+  }
+
+  section {
+    width: 35%;
+  }
+
+  section:last-of-type {
+    width: 40%;
+  }
+
+  form {
+    row-gap: 0.5em;
+    font-size: 1em;
+  }
+
+  form input,
+form textarea {
+  border: 1px solid #64c8dd;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.round {
+  position: relative;
+}
+
+.round label {
+  background-color: rgb(0, 0, 0, 0);
+  border: 3px solid #64c8dd;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 14px;
+}
+
+.round label:after {
+  border: 2px solid #64c8dd;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 3px;
+  opacity: 0;
+  position: absolute;
+  top: 2px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+  margin-right: 1em;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: rgb(0, 0, 0, 0);
+  border-color: #64c8dd;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+label {
+  font-size: 0.7em;
+}
+
+label.agree {
+  font-size: 0.5em;
+}
+
+  div.text {
+    margin-top: 0;
+    font-size: 0.75em;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  main {
+    margin: 10em auto;
+  }
+}
